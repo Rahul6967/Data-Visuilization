@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+{% load static %}
+{% block body %}
+<div class="d-flex">
+  {% include 'sidebar.html' %}
+  <div class="w-100">
+    {% include 'header.html' %}
+    <div class="my-3 mx-0">
+
+      <div class="d-flex-column">
+        <div class="col-11 card mx-4">
+          <div class="card-body">
+            <h5 class="card-title text-primary">Intensity</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Topic</h6>
+            <div>
+              <canvas id="intensity-topic"></canvas>
+            </div>
+            <h1 class="card-text text-end"></h1>
+          </div>
+        </div>
+
+        <div class="col-11 card mx-4 my-3">
+          <div class="card-body">
+            <h5 class="card-title text-primary">Likelihood</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Topic</h6>
+            <div>
+              <canvas id="likelihood-topic"></canvas>
+            </div>
+            <h1 class="card-text text-end"></h1>
+          </div>
+        </div>
+
+        <div class="d-flex">
+          <div class="col-5 card mx-4 my-3">
+            <div class="card-body">
+              <h5 class="card-title text-primary">Relevance</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Region</h6>
+              <div>
+                <canvas id="relevance-region"></canvas>
+              </div>
+              <h1 class="card-text text-end"></h1>
+            </div>
+          </div>
+
+          <div class="col-5 card mx-4 my-3">
+            <div class="card-body">
+              <h5 class="card-title text-primary">Year</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Pestle</h6>
+              <div>
+                <canvas id="year-pestle"></canvas>
+              </div>
+              <h1 class="card-text text-end"></h1>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-11 card mx-4 my-3">
+          <div class="card-body">
+            <h5 class="card-title text-primary">Country</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Pestle</h6>
+            <div>
+              <canvas id="country-pestle"></canvas>
+            </div>
+            <h1 class="card-text text-end"></h1>
+          </div>
+        </div>
+      
+
+    </div>
+  </div>
+</div>
+
+
+  {% endblock body %}
+
+  {% block script %}
+  <script src="{% static '/js/index.js' %}"></script>
+  {% endblock script %}
